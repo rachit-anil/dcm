@@ -3,7 +3,10 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 @import '@angular/cdk/overlay-prebuilt.css';
-// @import './node_modules/@perfectmemory/ngx-contextmenu/src/assets/stylesheets/base.scss';
+
+// Working
+@import "@ag-grid-community/styles/ag-grid.css";
+@import "@ag-grid-community/styles/ag-theme-quartz.css";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

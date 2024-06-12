@@ -34,8 +34,9 @@ import { ContextMenuModule } from "@perfectmemory/ngx-contextmenu";
 import { CookieModule } from "ngx-cookie";
 import { OrderModule } from "ngx-order-pipe";
 import { SharedModule } from "./shared/shared.module";
+// import { AgGridModule } from "@ag-grid-community/angular";
 import { AgGridComponent } from "./ag-grid/ag-grid.component";
-
+import { AgGridModule } from "@ag-grid-community/angular";
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +79,7 @@ import { AgGridComponent } from "./ag-grid/ag-grid.component";
     CookieModule,
     OrderModule,
     SharedModule,
+    AgGridModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
