@@ -109,3 +109,19 @@
 <input type="text" #inputTarget />
 
 <button [ngxClipboard]="inputTarget">Copy</button>
+
+
+<!-- Order Pipe -->
+Order Pipe
+<ul>
+	<li *ngFor="let item of array | orderBy: order">
+		{{ item.name }}
+	</li>
+</ul> 
+
+
+<ui-switch></ui-switch>
+
+
+
+<app-ag-grid></app-ag-grid>

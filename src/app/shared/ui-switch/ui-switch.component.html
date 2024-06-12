@@ -1,0 +1,6 @@
+<mat-slide-toggle 
+  [checked]="checked" 
+  [disabled]="disabled" 
+  (change)="onToggle($event)">
+  <span [ngStyle]="{ backgroundColor: defaultBgColor }">{{ checked ? labelOn : labelOff }}</span>
+</mat-slide-toggle>

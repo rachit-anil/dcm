@@ -31,6 +31,10 @@ import { NgMultiSelectComponent } from "./ng-multi-select/ng-multi-select.compon
 import { ClipboardModule } from "ngx-clipboard";
 import { ContextMenuComponent1 } from "./context-menu/context-menu.component";
 import { ContextMenuModule } from "@perfectmemory/ngx-contextmenu";
+import { CookieModule } from "ngx-cookie";
+import { OrderModule } from "ngx-order-pipe";
+import { SharedModule } from "./shared/shared.module";
+import { AgGridComponent } from "./ag-grid/ag-grid.component";
 
 @NgModule({
   declarations: [
@@ -39,6 +43,7 @@ import { ContextMenuModule } from "@perfectmemory/ngx-contextmenu";
     QueryBuilderComponent,
     NgMultiSelectComponent,
     ContextMenuComponent1,
+    AgGridComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +75,9 @@ import { ContextMenuModule } from "@perfectmemory/ngx-contextmenu";
     }),
     ClipboardModule,
     ContextMenuModule,
+    CookieModule,
+    OrderModule,
+    SharedModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
