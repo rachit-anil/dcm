@@ -37,6 +37,12 @@ import { SharedModule } from "./shared/shared.module";
 // import { AgGridModule } from "@ag-grid-community/angular";
 import { AgGridComponent } from "./ag-grid/ag-grid.component";
 import { AgGridModule } from "@ag-grid-community/angular";
+import { JwtModule } from "@auth0/angular-jwt";
+import { HttpClientModule } from "@angular/common/http";
+import { JwtExampleComponent } from './jwt-example/jwt-example.component';
+export function tokenGetter() {
+  return localStorage.getItem("access_token");
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +51,7 @@ import { AgGridModule } from "@ag-grid-community/angular";
     NgMultiSelectComponent,
     ContextMenuComponent1,
     AgGridComponent,
+    JwtExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,6 +87,14 @@ import { AgGridModule } from "@ag-grid-community/angular";
     OrderModule,
     SharedModule,
     AgGridModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["http://localhost:8080"],
+        disallowedRoutes: ["http://example.com/examplebadroute/"],
+      },
+    }),
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
