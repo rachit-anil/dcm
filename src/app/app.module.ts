@@ -29,6 +29,8 @@ import { LinkyModule } from "ngx-linky";
 import { BlockUIModule } from "ng-block-ui";
 import { NgMultiSelectComponent } from "./ng-multi-select/ng-multi-select.component";
 import { ClipboardModule } from "ngx-clipboard";
+import { ContextMenuComponent1 } from "./context-menu/context-menu.component";
+import { ContextMenuModule } from "@perfectmemory/ngx-contextmenu";
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { ClipboardModule } from "ngx-clipboard";
     AngularMultiselectComponent,
     QueryBuilderComponent,
     NgMultiSelectComponent,
+    ContextMenuComponent1,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +69,7 @@ import { ClipboardModule } from "ngx-clipboard";
       message: "loading...",
     }),
     ClipboardModule,
+    ContextMenuModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
