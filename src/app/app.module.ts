@@ -1,34 +1,34 @@
-import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, isDevMode } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AngularMultiselectComponent } from './angular-multiselect/angular-multiselect.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularDraggableModule } from 'angular2-draggable';
-import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown-ivy';
-import { NgxAngularQueryBuilderModule } from 'ngx-angular-query-builder';
-import { QueryBuilderComponent } from './query-builder/query-builder.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { StoreModule } from "@ngrx/store";
+import { EffectsModule } from "@ngrx/effects";
+import { StoreRouterConnectingModule } from "@ngrx/router-store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { AngularMultiselectComponent } from "./angular-multiselect/angular-multiselect.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AngularDraggableModule } from "angular2-draggable";
+import { AngularMultiSelectModule } from "angular2-multiselect-dropdown-ivy";
+import { NgxAngularQueryBuilderModule } from "ngx-angular-query-builder";
+import { QueryBuilderComponent } from "./query-builder/query-builder.component";
+import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatInputModule } from '@angular/material/input';
-import { MatNativeDateModule } from '@angular/material/core';
-import { LinkyModule } from 'ngx-linky';
-import { BlockUIModule } from 'ng-block-ui';
-import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-import { NgMultiSelectComponent } from './ng-multi-select/ng-multi-select.component';
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatSelectModule } from "@angular/material/select";
+import { MatIconModule } from "@angular/material/icon";
+import { MatCardModule } from "@angular/material/card";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatInputModule } from "@angular/material/input";
+import { MatNativeDateModule } from "@angular/material/core";
+import { LinkyModule } from "ngx-linky";
+import { BlockUIModule } from "ng-block-ui";
+import { NgMultiSelectComponent } from "./ng-multi-select/ng-multi-select.component";
+import { ClipboardModule } from "ngx-clipboard";
 
 @NgModule({
   declarations: [
@@ -63,9 +63,9 @@ import { NgMultiSelectComponent } from './ng-multi-select/ng-multi-select.compon
     BlockUIModule.forRoot({
       delayStart: 0,
       delayStop: 100,
-      message: 'loading...',
+      message: "loading...",
     }),
-    NgMultiSelectDropDownModule,
+    ClipboardModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
