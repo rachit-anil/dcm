@@ -40,6 +40,7 @@ import { AgGridModule } from "@ag-grid-community/angular";
 import { JwtModule } from "@auth0/angular-jwt";
 import { HttpClientModule } from "@angular/common/http";
 import { JwtExampleComponent } from './jwt-example/jwt-example.component';
+import { SearchTagsComponent } from './search-tags/search-tags.component';
 export function tokenGetter() {
   return localStorage.getItem("access_token");
 }
@@ -52,6 +53,7 @@ export function tokenGetter() {
     ContextMenuComponent1,
     AgGridComponent,
     JwtExampleComponent,
+    SearchTagsComponent,
   ],
   imports: [
     BrowserModule,
